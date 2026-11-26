@@ -778,7 +778,11 @@
 
   // ============ СЛОИ (все без API-ключа) ============
   const layers = {
- 
+    // Схема — стандартный OpenStreetMap
+    map: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }),
     // Спутник — Esri World Imagery (без подписей и границ)
     satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       attribution: '© Esri, Maxar, Earthstar Geographics',
